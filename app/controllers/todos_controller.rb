@@ -28,7 +28,7 @@ class TodosController < ApplicationController
     task_id = params[:todo][:id]
     @todo = Todo.find(task_id.to_i)
     if @todo.destroy
-      render json: {status: 200, message: task_id + ': removed'}
+      render json: {status: 200, message: "task with id " + task_id.to_s + ': removed'}
     else
       render nothing: true, status: :bad_request
     end
