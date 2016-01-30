@@ -40,4 +40,3 @@ class TodosController < ApplicationController
     params.require(:todo).permit(:title, :text, :completed)
   end
 end
-                                                                                                                                                 5
